@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "name": "Updated Product Name",
+      "id": "1"
+    },
+    {
+      "name": "Updated Product Name",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "Smartwatch",
+      "category": "Wearable Tech",
+      "price": 199.99,
+      "stock": 30,
+      "rating": 4.3,
+      "image": "https://example.com/images/smartwatch.jpg",
+      "description": "Feature-packed smartwatch with heart rate monitoring and GPS.",
+      "brand": "Apple"
+    },
+    {
+      "id": "4",
+      "name": "Bluetooth Speaker",
+      "category": "Audio",
+      "price": 49.99,
+      "stock": 50,
+      "rating": 4.6,
+      "image": "https://example.com/images/speaker.jpg",
+      "description": "Portable Bluetooth speaker with deep bass and long battery life.",
+      "brand": "JBL"
+    },
+    {
+      "id": "5",
+      "name": "Mechanical Keyboard",
+      "category": "Accessories",
+      "price": 89.99,
+      "stock": 40,
+      "rating": 4.7,
+      "image": "https://example.com/images/keyboard.jpg",
+      "description": "RGB mechanical keyboard with customizable keys and fast response time.",
+      "brand": "Razer"
+    },
+    {
+      "id": 1742400765217,
+      "name": "New Product",
+      "category": "Misc",
+      "price": 50,
+      "stock": 20,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/150",
+      "description": "A newly added product.",
+      "brand": "Generic"
+    },
+    {
+      "id": 1742400766273,
+      "name": "New Product",
+      "category": "Misc",
+      "price": 50,
+      "stock": 20,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/150",
+      "description": "A newly added product.",
+      "brand": "Generic"
+    },
+    {
+      "id": 1742400766561,
+      "name": "New Product",
+      "category": "Misc",
+      "price": 50,
+      "stock": 20,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/150",
+      "description": "A newly added product.",
+      "brand": "Generic"
+    },
+    {
+      "id": 1742400766753,
+      "name": "New Product",
+      "category": "Misc",
+      "price": 50,
+      "stock": 20,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/150",
+      "description": "A newly added product.",
+      "brand": "Generic"
+    },
+    {
+      "id": 1742400766937,
+      "name": "New Product",
+      "category": "Misc",
+      "price": 50,
+      "stock": 20,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/150",
+      "description": "A newly added product.",
+      "brand": "Generic"
+    }
+  ]
+}
