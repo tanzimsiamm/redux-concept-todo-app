@@ -24,9 +24,9 @@ export const productsApi = createApi({
           ? [...result.map(({ id }) => ({ type: 'Product' as const, id })), { type: 'Product', id: 'LIST' }]
           : [{ type: 'Product', id: 'LIST' }],
     }),
-    getProdutById: builder.query<Product, number>({ // Change Product[] to Product
+    getProductById: builder.query<Product, number>({ // Change Product[] to Product
       query: (id) => ({
-        url: `product/${id}`,
+        url: `products/${id}`,
         method: 'GET',
       }),
       providesTags: (result, error, id) => [{ type: 'Product', id }]
@@ -65,7 +65,7 @@ export const productsApi = createApi({
 
 export const {
   useGetProductsQuery,
-  useGetProdutByIdQuery,
+  useGetProductByIdQuery,
   useAddProductMutation,
   useUpdateProductMutation,
   useDeleteProductMutation,

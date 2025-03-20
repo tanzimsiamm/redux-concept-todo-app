@@ -60,7 +60,7 @@ const Products = () => {
               <p className="text-gray-600">${product.price}</p>
               <button onClick={() => handleUpdateProduct(product.id)} className="bg-blue-500 text-white px-4 py-2 rounded mt-2">Update</button>
               <button onClick={() => handleDeleteProduct(product.id)} className="bg-red-500 text-white px-4 py-2 rounded mt-2 ml-2">Delete</button>
-              <Link to={`/product/${product.id}`} className="text-blue-500 block mt-2">View Details</Link>
+              <Link to={`${product.id}`} className="text-blue-500 block mt-2">View Details</Link>
             </div>
           ))}
         </div>

@@ -1,27 +1,28 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useGetProdutByIdQuery } from '../app/features/api/productsApi';
+import { useGetProductByIdQuery } from '../app/features/api/productsApi';
 
-const ProductDetails = () => {
+const ProductDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const { data, error, isLoading } = useGetProdutByIdQuery(Number(id));
+  const productId = parseInt(id || '0', 10);
 
-  console.log("Product ID:", id);
-  console.log("Fetched Product Data:", data);
-  console.log("Error:", error);
+  const { data: product, isLoading, isError } = useGetProductByIdQuery(productId);
+  console.log('product is', productId)
+  console.log('lol is', product)
 
-  if (isLoading) return <p>Loading...</p>;
-  if (error) {
-    return <p>Error: {error?.status} - {error.data?.message || 'Failed to load product'}</p>;
-  }
-  if (!data) return <p>Product not found</p>;
+  if (isLoading) return <div className="text-center mt-8">Loading product details...</div>;
+  if (isError || !product) return <div className="text-center mt-8 text-red-600">Error loading product details</div>;
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold">{data?.name}</h1>
-      <img src={data?.image} alt={data?.name} className="w-96 h-96 object-cover" />
-      <p className="text-gray-600">{data?.description}</p>
-      <p className="text-lg font-semibold">Price: ${data?.price}</p>
-      <p>Stock: {data?.stock}</p>
+    <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+      <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
+      <img src={product.image} alt={product.name} className="w-full h-64 object-cover rounded mb-4" />
+      <p className="text-gray-700"><strong>Category:</strong> {product.category}</p>
+      <p className="text-gray-700"><strong>Price:</strong> ${product.price}</p>
+      <p className="text-gray-700"><strong>Stock:</strong> {product.stock}</p>
+      <p className="text-gray-700"><strong>Rating:</strong> {product.rating}</p>
+      <p className="text-gray-700"><strong>Brand:</strong> {product.brand}</p>
+      <p className="text-gray-700"><strong>Description:</strong> {product.description}</p>
     </div>
   );
 };

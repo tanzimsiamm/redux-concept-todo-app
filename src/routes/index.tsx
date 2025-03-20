@@ -8,11 +8,11 @@ import NotFound from "../utils/NotFound";
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />, // Ensure App contains an <Outlet />
+    element: <App />,
     children: [
       { path: '/', element: <Home /> },
       { path: 'products', element: <Products /> },
-      { path: 'product/:id', element: <ProductDetails /> }, // ✅ Correct path
+      { path: 'products/:id', element: <ProductDetails /> },
       { path: '*', element: <NotFound /> }
     ],
   },
